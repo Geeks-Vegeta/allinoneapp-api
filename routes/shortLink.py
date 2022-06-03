@@ -38,4 +38,4 @@ class ShortLink(Resource):
             return {"url": str(out_link)}
 
 
-        return {"message": out_link}
+        return {"message": out_link},400
