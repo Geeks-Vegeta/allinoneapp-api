@@ -102,12 +102,16 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       -
+        name: Test
+        run: |
+          docker run --rm shreyasmohite/allinoneapp:latest
+      -
         name: Build and push
         uses: docker/build-push-action@v3
         with:
           context: .
           push: true
           tags: shreyasmohite/allinoneapp:latest
-      - 
-        name: Run tests inside the container
-        run: docker run shreyasmohite/allinoneapp:latest run pytest
+      # - 
+      #   name: Run tests inside the container
+      #   run: docker run shreyasmohite/allinoneapp:latest run pytest
