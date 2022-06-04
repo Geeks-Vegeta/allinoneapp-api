@@ -32,6 +32,8 @@ share/python-wheels/
 *.egg
 MANIFEST
 
+# 87bd267c-c2d3-4a41-b2ce-cf6fc4de66fd = dockerlogin
+
 # PyInstaller
 #  Usually these files are written by a python script from a template
 #  before PyInstaller builds the exe, so as to inject date/other infos into it.
