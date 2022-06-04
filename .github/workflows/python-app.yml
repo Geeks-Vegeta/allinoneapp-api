@@ -103,10 +103,10 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       -
         name: Test
-        with:
-          PORT: 5000
         run: |
           docker run --rm shreyasmohite/allinoneapp:latest
+        env:
+          PORT : 5000
       -
         name: Build and push
         uses: docker/build-push-action@v3
