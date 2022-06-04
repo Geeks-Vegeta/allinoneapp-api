@@ -83,7 +83,7 @@ on:
       - 'main'
 
 jobs:
-  docker:
+  docker build and test :
     runs-on: ubuntu-latest
     steps:
       -
@@ -110,4 +110,4 @@ jobs:
           tags: shreyasmohite/allinoneapp:latest
       - 
         name: Run tests inside the container
-       run: docker run shreyasmohite/allinoneapp:latest run pytest
+        run: docker run shreyasmohite/allinoneapp:latest run pytest
