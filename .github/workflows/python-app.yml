@@ -104,7 +104,7 @@ jobs:
       -
         name: Test
         run: |
-          docker run -it -p $PORT:$PORT --rm shreyasmohite/allinoneapp:latest
+          docker run --rm -it -p $PORT:$PORT  shreyasmohite/allinoneapp:latest
         env:
           PORT : 5000
       -
