@@ -105,6 +105,8 @@ jobs:
         name: Test
         run: |
           docker run --rm shreyasmohite/allinoneapp:latest
+        with:
+          PORT = 5000
       -
         name: Build and push
         uses: docker/build-push-action@v3
