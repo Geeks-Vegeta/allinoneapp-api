@@ -108,3 +108,6 @@ jobs:
           context: .
           push: true
           tags: shreyasmohite/allinoneapp:latest
+      - 
+        name: Run tests inside the container
+       run: docker run shreyasmohite/allinoneapp:latest run pytest
