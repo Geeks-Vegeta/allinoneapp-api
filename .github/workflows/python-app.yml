@@ -83,7 +83,7 @@ on:
       - 'main'
 
 jobs:
-  docker build and test :
+  docker_build_and_test :
     runs-on: ubuntu-latest
     steps:
       -
