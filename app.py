@@ -21,7 +21,7 @@ CORS(app)
 
 @app.route("/", methods=['GET'])
 def home():
-    return {"message": "This is initial route"}
+    return {"message": "This is initial routes"}
 
 api.add_resource(IcoConverter,"/ico")
 api.add_resource(PngToJpg,"/pngtojpg")
