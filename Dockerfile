@@ -12,4 +12,3 @@ RUN pip install -r requirements.txt
 COPY . .
 EXPOSE $PORT
 CMD ["python", "app.py"]
-CMD gunicorn app:app --bind 0.0.0.0:$PORT --preload
