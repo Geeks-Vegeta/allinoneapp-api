@@ -11,10 +11,9 @@ class ShortLink(Resource):
         mode = request.args.get('mode')
         link = request.args.get('link')
 
-        out_link = s.chilpit.short(link)
-
         if mode=="tinyurl":
             out_link = s.tinyurl.short(link)
+            print(out_link)
             return {"url": str(out_link)}
 
 
@@ -27,15 +26,4 @@ class ShortLink(Resource):
             out_link = s.clckru.short(link)
             return {"url": str(out_link)}
 
-
-        if mode=="chilpit":
-            out_link = s.chilpit.short(link)
-            return {"url": str(out_link)}
-
-        
-        if mode=="dagd":
-            out_link = s.dagd.short(link)
-            return {"url": str(out_link)}
-
-
-        return {"message": out_link},400
+        return {"message": "Un able to short url"},400
